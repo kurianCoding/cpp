@@ -3,7 +3,5 @@ CC=g++
 #include any compilation flags to be used
 #in CFLAGS
 #CFLAGS=
-.cpp:
-	$(CC) $(CFLAGS) $@.cpp -o ../cppbin/$@
-clean:
-	rm ../cppbin/*
+hellomake: hello.cpp
+	g++ -o hello hello.cpp
