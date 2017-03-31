@@ -2,6 +2,7 @@
  * it takes an array and a number. It returns the
  * index of the number.*/
 # include<iostream>
+using namespace std;
 int ternarySearch(int *array,int key,int length) {
     int max=length,min=0;
     while(max-min>0) {
@@ -35,9 +36,13 @@ int ternarySearch(int *array,int key,int length) {
 int search(int *array,int key,int length) {
     return ternarySearch(array,key,length);
 }
+
+
 int main() {
     // take input
     // search for index
+    int array[]= {1,2,3,6,7};
+    cout<<search(array,7,5)<<endl;
     // 	divide the input to three parts
     // 	if value lies in first part then
     // 	search the first part or the sec
