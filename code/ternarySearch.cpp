@@ -43,6 +43,7 @@ int main() {
     // search for index
     int array[]= {1,2,3,6,7};
     cout<<search(array,7,5)<<endl;
+    cout<<search(array,2,5)<<endl;
     // 	divide the input to three parts
     // 	if value lies in first part then
     // 	search the first part or the sec
