@@ -1,10 +1,12 @@
 #include <iostream>
+#include<algorithm>
 using namespace std;
 
 int getMatrix(int rows,int columns) {
     int romax=1,colmax=1,rocount=1;
     int matrix[rows][columns];
     int colcount[columns];
+    fill_n(colcount,columns,1);
     for(int i=0; i<rows; i++) {
         rocount=1;
         for(int j=0; j<columns; j++) {
