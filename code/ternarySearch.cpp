@@ -4,10 +4,13 @@
 # include<iostream>
 using namespace std;
 int ternarySearch(int *array,int key,int length) {
-    int max=length,min=0;
+    int max=length,min=0,max1=0,max2=0;
     while(max-min>0) {
-        int max1=min+(max-min)/3;
-        int max2=min+(max-min)*(2/3);
+        max1=min+(max-min)/3;
+        // the small correction made here because cpp calculated 2/3 as
+        // 0.
+        max2=min+(max-min)*2/3;
+        cout <<max1<<","<<max2<<endl;
         if(key==array[min]) {
             return min;
         }
@@ -39,14 +42,9 @@ int search(int *array,int key,int length) {
 
 
 int main() {
-    // take input
-    // search for index
     int array[]= {1,2,3,6,7};
     cout<<search(array,7,5)<<endl;
-    cout<<search(array,2,5)<<endl;
-    // 	divide the input to three parts
-    // 	if value lies in first part then
-    // 	search the first part or the sec
-    // 	ond or third part.
+    cout<<search(array,1,5)<<endl;
+    cout<<search(array,3,5)<<endl;
     return 0;
 }
