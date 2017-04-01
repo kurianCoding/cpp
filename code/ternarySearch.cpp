@@ -10,7 +10,6 @@ int ternarySearch(int *array,int key,int length) {
         // the small correction made here because cpp calculated 2/3 as
         // 0.
         max2=min+(max-min)*2/3;
-        cout <<max1<<","<<max2<<endl;
         if(key==array[min]) {
             return min;
         }
