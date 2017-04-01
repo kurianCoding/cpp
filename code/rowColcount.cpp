@@ -2,8 +2,9 @@
 using namespace std;
 
 int getMatrix(int rows,int columns) {
-    int romax=1,colmax=1,rocount=1,colcount=1;
+    int romax=1,colmax=1,rocount=1;
     int matrix[rows][columns];
+    int colcount[columns];
     for(int i=0; i<rows; i++) {
         rocount=1;
         for(int j=0; j<columns; j++) {
@@ -18,9 +19,9 @@ int getMatrix(int rows,int columns) {
             }
             if(i>0) {
                 if(matrix[i-1][j]==matrix[i][j]) {
-                    colcount++;
+                    colcount[j]=colcount[j]+1;
                 } else {
-                    colcount=1;
+                    colcount[j]=1;
                 }
             }
 
@@ -28,13 +29,12 @@ int getMatrix(int rows,int columns) {
         if(rocount>romax) {
             romax=rocount;
         }
-        if(colcount>colmax) {
-            colmax=colcount;
+
+    }
+    for(int k=0; k<columns; k++) {
+        if(colcount[k]>colmax) {
+            colmax=colcount[k];
         }
-        if(i==rows-1) {
-            colcount=1;
-        }
-        cout<< rocount<<colcount<<endl;
     }
 
     return romax*colmax;
