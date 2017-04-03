@@ -12,6 +12,9 @@ int findDiff(int max, int number) {
 		initialdiff = 0;
 	}
 	int maxTimes = log2(max);
+	int maxFreq = number / maxTimes;
+	int substract = 0;
+	substract = maxFreq * maxTimes;
 	return maxTimes;
 }
 
@@ -22,4 +25,5 @@ int main() {
 	for (int h = 0; h < testCases; h++) {
 		cin >> boxCount >> maxItem >> vists;
 	}
+	return 0;
 }
