@@ -1,8 +1,7 @@
 CC=g++
-CFLAGS=-Wall -g `pkg-config --cflags opencv`
-LIBRARY=`pkg-config --libs opencv`
+CFLAGS=-Wall -g
 ODIR=/usr/local/bin
 .cpp:
-	$(CC) $@.cpp $(CFLAGS) -o $(PWD)/../cbin/$@ $(LIBRARY)
+	$(CC) $@.cpp $(CFLAGS) -o $(PWD)/../cbin/$@
 clean:
 	rm -f hello
