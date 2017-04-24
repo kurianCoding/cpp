@@ -4,10 +4,10 @@
 #include <string.h>
 #include <iostream>
 class Sudoku {
-    private:
+       private:
 	int rows, columns, subs;
 
-    public:
+       public:
 	Sudoku(Sudoku &p) {
 		this->rows = p.rows / p.subs;
 		this->columns = p.columns / p.subs;
