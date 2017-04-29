@@ -13,4 +13,8 @@ bool doIntersect(Segment* a, Segment* b) {
 	int angle = (a->originx - a->endx) * (b->originy - b->endy) /
 		    ((a->originy - a->endy) * (b->originx - b->endx));
 	return angle > 0;
-}
+
+	int main() {
+		cout << "hello";
+		return 0;
+	}
