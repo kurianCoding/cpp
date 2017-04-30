@@ -8,13 +8,14 @@ struct Segment {
 	int endx, endy;
 };
 /*this function checks if the angle is clockwise or counter clockwise
+ * this is the best way to comment on code
  * */
 bool doIntersect(Segment* a, Segment* b) {
 	int angle = (a->originx - a->endx) * (b->originy - b->endy) /
 		    ((a->originy - a->endy) * (b->originx - b->endx));
 	return angle > 0;
-
-	int main() {
-		cout << "hello";
-		return 0;
-	}
+}
+int main() {
+	cout << "hello";
+	return 0;
+}
