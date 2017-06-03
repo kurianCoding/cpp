@@ -1,10 +1,11 @@
 #include<iostream>
+
 using namespace std;
 
 int main(){
-	int number=0;
-	while(cin>>number){
-	cout<<"hello"<<number+10<<endl;
+	string name;
+	while(cin>>name){
+		cout<<"hello "<<name<<endl;
 	}
 	return 0;
 }
